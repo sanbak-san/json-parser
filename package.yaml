@@ -35,6 +35,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - json-parser
+    - parsec
 
 tests:
   json-parser-test:
@@ -46,3 +47,5 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - json-parser
+    - hspec
+    - quick-check
