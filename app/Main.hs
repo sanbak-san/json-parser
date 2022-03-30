@@ -32,7 +32,7 @@ tuplesValue :: Parser String
 tuplesValue = do property <- thisParser nameValue
                  thisParser (char ':')
                  value <- thisParser jsonValue
-                 return ("<" ++ property ++ ">" ++ value ++ "</" ++ property ++ ">")
+                 return ("<" <> property <> ">" <> value <> "</" <> property <> ">")
 
 nameValue :: Parser String
 nameValue = between (char '"' ) (char '"' ) (many letter)
